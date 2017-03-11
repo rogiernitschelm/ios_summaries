@@ -81,7 +81,7 @@ Example counting:
 
 ### Appending and removing from array
 
-Example insertion:
+Append(), insert(), add:
 
     Appending:
 
@@ -100,14 +100,14 @@ Example insertion:
     array.insert(3, at: 2)
     array.insert(10, at: 10) // Error
 
-Example replacing:
+Replacing:
 
     Replacing a value:
 
     array[0] = 0
     array // [0, 2, 3, 4]
 
-Example removing:
+Remove(at: index), removeLast(), removeAll()
 
     Removing:
 
@@ -118,7 +118,7 @@ Example removing:
 
 Removing returns the element removed.
 
-Example merging arrays:
+Merging:
 
     let arrayOne = [1, 2, 3]
     let arrayTwo = [4, 5, 6]
@@ -128,24 +128,25 @@ Example merging arrays:
 
 Methods:
 
-- reversed()
-- sorted()
+- reversed();
+- sorted();
+- filter();
+- map();
+- reduce();
 
-Example reversing array:
+Reversed()
 
     let array = [1, 2, 3]
     var reverse = array.reversed() // [3, 2, 1]
 
-Example sorting array:
-
-    Shorthand:
+Sorted()
 
     let array = [100, 1, 10]
-    array.sorted() { $0 < $1 }
-    array // [1, 10, 100]
+    let shorthandSorted = array.sorted() { $0 < $1 }
+    let longhandSorted = array.sorted ( { (a: Int, b: Int) -> Bool in a < b } )
 
-    Longhand:
+Filter()
 
-    let longhandSortedArray = array.sorted { (a: Int, b: Int) -> Bool in
-        a < b
-    }
+    let array = [1, 2, 3, 4, 5, 6]
+    let shorthandFilter = array.filter { $0 % 2 == 0 }
+    let longhandFilter = array.filter ( { (a: Int) -> Bool in a % 2 == 0 } )
