@@ -1,77 +1,62 @@
-# Collections and Methods
+# Arrays
 
-Collection types:
+## Declaration
 
-- arrays
-- dictionaries
-- sets
-- tuples
-
-## Arrays
-
-### Declaration
-
-Example declaration:
-
-    Long- and shorthand declaration:
+Long- and shorthand declaration:
 
     let shorthandArray = [1, 2, 3]
     let longhandArray: [Int] = [1, 2, 3]
     var emptyArray = [String]() // Empty array of type String
 
-    Array with multiple types:
+Array with multiple types:
 
     var multipleTypeArray: [Any] = [1, "two", true]
     var multipleClassArray: [AnyObject] = [Car, Milk, House]
 
-    Prepopulating:
+Prepopulating:
 
     var stringArray = [String](repeating: "hi", count: 3) // ["hi", "hi", "hi"]
 
-    Multi-dimensional array:
+Multi-dimensional array:
 
     var multipleDimensionalArray = [[1, 2], [3,4]]
     var emptyMultipleDimensionalArray = [[Int]]()
 
-### Accessing arrays
+## Accessing arrays
 
-Example accessing:
-
-    Subscript one-dimensional array:
+Subscript one-dimensional array:
 
     let array = ["cow", "chicken", "car"]
     array[0] // "cow"
     array[2] // "car"
 
-    Subscript Multi-dimensional array:
+Subscript Multi-dimensional array:
 
     let multipleDimensionalArray = [["car", "bike"], ["cow", "pig"]]
     multipleDimensionalArray[0][0] // "car"
     multipleDimensionalArray[1][1] // "pig"
 
-    Accessing first and last element:
+Accessing first and last element:
 
     let someArray = ["cow", "chicken", "car"]
     someArray.first // "cow"
     someArray.last // "car"
 
-Example retrieving sub-array:
+Retrieving sub-array:
 
     let array = [1, 2, 3, 4, 5, 6]
     var subArray = array[0...2] // 1, 2, 3
     var otherSubArray = array[0..<2] //
 
 
-### Counting elements
+## Counting elements
 
-Example counting:
-
-    Counting:
+Counting:
 
     let array = [1, 2, 3]
     array.count // 3
 
-    Check for empty:
+Check for empty:
 
     let filledArray = [1, 2, 3]
     var emptyArray = [Any]()
@@ -79,22 +64,16 @@ Example counting:
     filledArray // false
     emptyArray.isEmpty // true
 
-### Appending and removing from array
+## Appending and removing from array
 
 Append(), insert(), add:
-
-    Appending:
 
     var array = [1, 2]
     array.append(3)
     array // [1, 2, 3]
 
-    Addition assignment:
-
     array += [4, 5, 6]
     array // [1, 2, 3, 4, 5, 6]
-
-    Insert value:
 
     var array = [1, 2, 4]
     array.insert(3, at: 2)
@@ -102,14 +81,10 @@ Append(), insert(), add:
 
 Replacing:
 
-    Replacing a value:
-
     array[0] = 0
     array // [0, 2, 3, 4]
 
 Remove(at: index), removeLast(), removeAll()
-
-    Removing:
 
     var array = [1, 2, 3, 4]
     array.removeLast() // [1, 2, 3]
@@ -124,7 +99,7 @@ Merging:
     let arrayTwo = [4, 5, 6]
     var combinedArray = arrayOne + arrayTwo // [1, 2, 3, 4, 5, 6]
 
-### Array-methods
+## Array-methods
 
 Methods:
 
