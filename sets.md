@@ -61,4 +61,4 @@ SymmetricDifference() and !fromSymmetricDifference()
     // Creates a set of values that are in either set, but not in both sets
 
     var symmetricDifference = fruits.symmetricDifference(food)
-    fruits.formSymmetricDifference(food)
+    fruits.formSymmetricDifference(food) 
