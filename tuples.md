@@ -24,3 +24,10 @@
     team.city // Amsterdam
     team.teamName // "AFC Ajax"
     team.position // 2
+
+## Modification
+
+Changing a value within a tuple
+
+    var team = ("Amsterdam", "AFC Ajax", "Ziggo", 2)
+    team.0 = "Culemborg"

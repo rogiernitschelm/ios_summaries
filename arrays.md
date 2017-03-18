@@ -108,6 +108,7 @@ Methods:
 - filter();
 - map();
 - reduce();
+- forEach();
 
 Reversed()
 
@@ -117,7 +118,7 @@ Reversed()
 Sorted()
 
     let array = [100, 1, 10]
-    let shorthandSorted = array.sorted() { $0 < $1 }
+    let shorthandSorted = array.sorted { $0 < $1 }
     let longhandSorted = array.sorted ( { (a: Int, b: Int) -> Bool in a < b } )
 
 Filter()
@@ -125,3 +126,8 @@ Filter()
     let array = [1, 2, 3, 4, 5, 6]
     let shorthandFilter = array.filter { $0 % 2 == 0 }
     let longhandFilter = array.filter ( { (a: Int) -> Bool in a % 2 == 0 } )
+
+ForEach()
+
+    let array = [1, 2, 3]
+    array.forEach { print($0) }
