@@ -20,6 +20,10 @@ If-else-if:
       print("Neither is true!")
     }
 
+If-case:
+
+
+
 Ternary:
 
     condition ? true : false
@@ -70,6 +74,8 @@ Switch and enums:
             print("name \(name) price \(price)")
 
     }
+
+
 ### Loops
 
 For-in:
@@ -85,6 +91,34 @@ For-in:
     for (key, argument) in dictionary {
       print("Key \(key) and argument \(argument)")
     }
+
+For-case with filter:
+
+    var array = [
+      ("Henk", 23),
+      ("Hermien", 3),
+      ("Sjaak", 99),
+      ("Kees", 55),
+      ("Hermien", 77),
+      ("Hermien", 18)
+    ]
+
+    for case let ("Hermien", year) in array {
+      print("The age of hermien is \(year)")
+    }
+
+    let numbers: [Int?] = [1, 2, nil, 3, 4, nil]
+
+    for case let .some(number) in numbers {
+      print(number) // Only prints non-nil
+    }
+
+For-case with condition:
+
+    for case let number? in numbers where number > 3 {
+      print(number)
+    }
+
 
 While:
 
